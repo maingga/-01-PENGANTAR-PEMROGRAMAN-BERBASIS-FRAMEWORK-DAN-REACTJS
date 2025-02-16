@@ -37,7 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 # Laporan Praktikum
 
-## Pemrograman Berbasis Framework 2024
+## Pemrograman Berbasis Framework 2025
 
 | NIM   | 244107027007          |
 |-------|-----------------|  
