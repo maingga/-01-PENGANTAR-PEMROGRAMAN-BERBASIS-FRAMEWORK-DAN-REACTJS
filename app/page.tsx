@@ -1,5 +1,41 @@
 import Image from "next/image";
 
+function MyButton() {
+  return (
+    <a
+      href="http://localhost:3000"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300"
+    >
+      Buka Halaman
+    </a>
+  );
+}
+
+function Profile() {
+  return (
+    <>
+      <div className="text-xs">Developed by: {user.name}</div>
+      <img
+        className="rounded-full"
+        src={user.imageUrl}
+        alt={'Foto ' + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize
+        }}
+      />
+    </>
+  );
+}
+
+const user = {
+  name: 'Ahmad Nana Maingga',
+  imageUrl: 'https://firebasestorage.googleapis.com/v0/b/jokotarubjingga.appspot.com/o/profile_pictures%2FAghG6cAKUTbZiNBCNA5XAdcphGV2?alt=media',
+  imageSize: 90,
+};
+
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -14,7 +50,7 @@ export default function Home() {
         />
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2">
-            Get started by editing{" "}
+            Get started by editing {" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
               app/page.tsx
             </code>
@@ -47,6 +83,8 @@ export default function Home() {
           >
             Read our docs
           </a>
+          <MyButton />
+          <Profile />
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
